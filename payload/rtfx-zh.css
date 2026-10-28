@@ -1,0 +1,21 @@
+/* RTFX 2.8.1 — display-only localization and persistent category selection. */
+body { font-family: "Microsoft YaHei UI", "Microsoft YaHei", Tahoma, sans-serif; }
+.categories-list .rtfx-selected > .category-data > .category-name {
+    background-color: #123747 !important;
+    color: #e4f7ff !important;
+    box-shadow: inset 4px 0 0 #49bfff;
+    font-weight: bold;
+}
+.categories-list .rtfx-selected > .category-data > .category-name:hover {
+    background-color: #19495c !important;
+}
+.categories-list .category-name:focus { outline: 1px solid #49bfff; outline-offset: -1px; }
+.search input { padding-right: 64px !important; }
+/* Override the original active opacity/filter; cover thumbnail stars and the toolbar. */
+div.fav-img.active, div.fav-img.active:hover, div.favorites-button.active {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff454f' stroke='%23ff9ba1' stroke-width='0.7' d='M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-size: 21px 21px;
+    opacity: 1 !important;
+    filter: none !important;
+}
