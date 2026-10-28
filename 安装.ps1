@@ -45,7 +45,7 @@ foreach ($file in $expected.Keys) {
     }
 }
 if ($patched) {
-    if (!(Test-Path -LiteralPath $backup)) { throw '缺少原始入口备份，已停止升级。' }
+    if (!(Test-Path -LiteralPath $backup)) { throw '缺少原始入口备份，已停止安装。' }
     $oldJs = [IO.File]::ReadAllBytes((Join-Path $target 'js\rtfx-zh.js'))
     $oldCss = [IO.File]::ReadAllBytes((Join-Path $target 'css\rtfx-zh.css'))
     try {
@@ -56,7 +56,7 @@ if ($patched) {
         [IO.File]::WriteAllBytes((Join-Path $target 'css\rtfx-zh.css'), $oldCss)
         throw
     }
-    Write-Host '最终版已安装：汉化、分类高亮和红色收藏。旧版名称简化及撤销处理已移除，重启 AE 后生效。'
+    Write-Host '补丁已安装：汉化、分类高亮和红色收藏。重启 AE 后生效。'
     exit 0
 }
 if ($html -notmatch '(?i)</head>' -or $html -notmatch '(?i)</body>') { throw '原始入口结构不匹配。' }
@@ -71,5 +71,5 @@ try {
     Copy-Item -LiteralPath $backup -Destination $index -Force
     throw
 }
-Write-Host '最终版安装完成：汉化、分类高亮和红色收藏。重启 AE 后生效。'
+Write-Host '补丁安装完成：汉化、分类高亮和红色收藏。重启 AE 后生效。'
 Write-Host "原始入口已备份：$backup"

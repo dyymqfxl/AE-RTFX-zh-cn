@@ -1,6 +1,6 @@
 # AE 脚本 RTFX 中文补丁
 
-适用于对应版本的 **RTFX Generator v2.8.1 / Windows CEP 扩展**。
+适用于 After Effects 中的 **RTFX Generator v2.8.1 Windows CEP 扩展**。
 
 提供面板汉化、当前分类高亮和红色收藏星标，保留原版素材导入流程。
 
@@ -11,7 +11,6 @@
 - **面板汉化**：主分类、子分类、商店、收藏及常用按钮提示中文显示。
 - **分类高亮**：当前选中分类显示深蓝底色、蓝色左侧标记和加粗文字，移开鼠标仍保持。
 - **红色收藏**：已收藏素材的五角星显示红色，顶部收藏夹按钮激活时也显示红色。
-- **保持原版名称**：不简化素材名称，右侧缩略图下方不增加文字，不改动导入和撤销处理。
 
 ## 安装
 
@@ -28,12 +27,6 @@ C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\RTFX extension
 ```
 
 脚本会检查原版前端脚本是否与补丁适配的版本一致，不匹配时停止安装。安装需要管理员权限，因为默认扩展位于系统目录。
-
-### 从此前版本升级
-
-直接运行本版 **安装补丁.cmd**，不需要把旧版补丁逐个还原。重启 AE 后，旧版的名称简化和相关撤销处理不再加载。
-
-已保存在 AE 工程里的短名称不会自动恢复。
 
 ### 安装到其他目录
 
@@ -60,13 +53,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\安装.ps1" -Restore 
 ## 文件
 
 ```text
-安装补丁.cmd           安装或覆盖升级
+安装补丁.cmd           安装补丁
 还原原版.cmd           恢复安装前入口
 安装.ps1               共用安装及还原脚本
 payload/rtfx-zh.js      汉化与分类选择逻辑
 payload/rtfx-zh.css     分类高亮与红色收藏样式
 README.md              使用说明
-preview.png            用户提供的实际面板预览
+preview.png            面板效果预览
 ```
 
 ## 说明
