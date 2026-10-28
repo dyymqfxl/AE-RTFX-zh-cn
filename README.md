@@ -1,6 +1,6 @@
-# RTFX 汉化与界面增强补丁
+# AE 脚本 RTFX 中文补丁
 
-适用于本机对应版本的 **RTFX Generator v2.8.1 / Windows CEP 扩展**。
+适用于对应版本的 **RTFX Generator v2.8.1 / Windows CEP 扩展**。
 
 提供面板汉化、当前分类高亮和红色收藏星标，保留原版素材导入流程。
 
